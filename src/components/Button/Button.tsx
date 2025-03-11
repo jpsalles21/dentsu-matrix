@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 interface ButtonProps {
     onClick?: (value: any) => any;
     content: string;
-    variant: 'white' | 'dark';
+    variant: 'white' | 'black';
     width?: string;
     height?: string;
     disabled?: boolean;
