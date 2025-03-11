@@ -19,14 +19,14 @@ type Story = StoryObj<typeof Button>;
 
 export const WhiteButton: Story = {
     args: {
-        content: 'Sign in / Login',
+        children: 'Sign in / Join',
         variant: 'white',
     },
 };
 
 export const BlackButton: Story = {
     args: {
-        content: 'Sign in / Login',
+        children: 'Sign in / Join',
         variant: 'black',
     },
 }
