@@ -2,7 +2,7 @@
 import styles from './Button.module.css'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    onClick?: (value: any) => any;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
     variant: 'white' | 'black';
     width?: string;
     height?: string;
@@ -10,20 +10,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({ onClick, children, variant, width, height, disabled = false, type }: ButtonProps) => {
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if (disabled) {
-            event.preventDefault();
-            event.stopPropagation();
-            return;
-        }
-        if (onClick) {
-            onClick(event);
-        }
-    }
     return (
         <button
             className={styles[variant]}
-            onClick={handleClick}
+            onClick={onClick}
             type={type}
             disabled={disabled}
             style={{ width: `${width}`, height: `${height}` }}
