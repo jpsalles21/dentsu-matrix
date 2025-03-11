@@ -21,6 +21,8 @@ export const WhiteButton: Story = {
     args: {
         children: 'Sign in / Join',
         variant: 'white',
+        width: '123px',
+        height: '40px'
     },
 };
 
@@ -28,5 +30,7 @@ export const BlackButton: Story = {
     args: {
         children: 'Sign in / Join',
         variant: 'black',
+        width: '123px',
+        height: '40px'
     },
 }
