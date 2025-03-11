@@ -25,6 +25,7 @@ const Button = ({ onClick, children, variant, width, height, disabled = false, t
             className={styles[variant]}
             onClick={handleClick}
             type={type}
+            disabled={disabled}
             style={{ width: `${width}`, height: `${height}` }}
         >
             {children}
