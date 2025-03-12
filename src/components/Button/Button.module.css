@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.white, .black { 
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.white {
+    background-color: #fff;
+    color: #000;
+}
+
+.black {
+    background-color: #000;
+    color: #fff;
+}
