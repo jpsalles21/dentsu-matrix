@@ -1,18 +1,19 @@
+import styles from './Input.module.css'
+
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string,
-    required: boolean;
-    width?: string;
-    height?: string; 
+    required: boolean; 
+    style?: React.CSSProperties;
 }
 
-const Input = ({ label, type, placeholder, required, width, height }: InputProps) => {
+const Input = ({ label, type = 'text', placeholder, required, style }: InputProps) => {
     return (
-        <div className="input">
-            <label htmlFor="">{required && <span>*</span>}{label} </label>
+        <div className={styles.input__container}>
+            <label htmlFor="">{required && <span>* </span>}{label} </label>
             <input
                 type={type}
                 placeholder={placeholder}
-                style={{width, height}}
+                style={style}
             />
         </div>
     );
