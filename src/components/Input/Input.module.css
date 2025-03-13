@@ -1,0 +1,28 @@
+.input__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.input__container label {
+    font-size: 1rem;
+    color: #757575;
+    font-weight: 400;
+} 
+
+.input__container input {
+    border: solid 1px #D9D9D9;
+    background-color: #fff;
+    color: #1e1e1e;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.input__container input::placeholder {
+    color: #1e1e1e;
+}
+
+.input__container input:focus {
+    outline: solid 1px #1e1e1e;
+}
