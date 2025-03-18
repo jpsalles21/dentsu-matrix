@@ -1,8 +1,8 @@
 import styles from './Footer.module.css'
 
-const Footer = () => {
+const Footer = ({children}: React.ComponentProps<"footer">) => {
     return (
-        <footer className={styles.footer__container}>© 2025 Dentsu. All Rights Reserved</footer>
+        <footer className={styles.footer__container}>{children}</footer>
     );
 }
 
