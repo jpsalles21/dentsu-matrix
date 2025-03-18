@@ -29,11 +29,11 @@ const mockCards = [
         },
 ];
 
-interface HighlightsSectionProps {
+interface HighlightsProps{
     cards?: { title: string; content: string; icon: string }[]; 
 }
 
-const HighlightsSection = ({ cards = mockCards }: HighlightsSectionProps) => {
+const Highlights = ({ cards = mockCards }: HighlightsProps) => {
     return (
         <section className={styles.highlights__container}>
             {cards.map((card, index) => (
@@ -48,4 +48,4 @@ const HighlightsSection = ({ cards = mockCards }: HighlightsSectionProps) => {
     );
 };
 
-export default HighlightsSection;
+export default Highlights;
