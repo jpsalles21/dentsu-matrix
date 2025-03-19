@@ -15,7 +15,10 @@
 }
 
 .card__container__content h2 {
-    padding: 0 20.5px;
+    padding: 0 1.3438rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03rem;
 }
 .card__container__content {
     font-size: 1rem;
