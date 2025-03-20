@@ -22,6 +22,7 @@ export const DefaultCheckbox: Story = {
   args: {
     label: 'Return to a different location',
     checked: false,
+    id: 'checkbox'
   },
 };
 
@@ -29,6 +30,7 @@ export const CheckedCheckbox: Story = {
   args: {
     label: 'Return to a differente location',
     checked: true,
+    id: 'checkbox'
   },
 };
 
