@@ -1,0 +1,26 @@
+.card__container {
+    text-align: center;
+    width: 18.5rem;
+    height: 15.3125rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.5rem;
+}
+
+.logo {
+    padding-top: 1.5rem;
+}
+
+.card__container__content p {
+    padding: 0 1.5rem
+}
+
+.card__container__content h2 {
+    padding: 0 1.3438rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03rem;
+}
+.card__container__content {
+    font-size: 1rem;
+    font-weight: 400;
+}
