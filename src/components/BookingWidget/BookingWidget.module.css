@@ -1,0 +1,36 @@
+.booking_widget__container {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+}
+
+.booking_widget__container__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.booking_widget__container h1 {
+    color: #000000;
+    font-family: 1.5rem;
+}
+
+.booking_widget__container p {
+    color: #1e1e1e;
+}
+
+.booking_widget__container__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+}
+.booking_widget__container__actions Button {
+    max-width: 15.625rem;
+}
+
+.booking_widget__container__actions Button:hover {
+    background-color: #1e1e1e;
+}
