@@ -1,9 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+});
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={`${inter.className} ${styles.page}`}>
       <main className={styles.main}>
         <Image
           className={styles.logo}
