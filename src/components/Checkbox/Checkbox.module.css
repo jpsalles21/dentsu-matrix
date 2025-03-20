@@ -1,0 +1,33 @@
+.checkbox__container {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; 
+  }
+  
+  .checkbox__container input {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 0.25rem;
+    border: 1px solid #757575;
+  }
+  
+  .checkbox__container label {
+    font-size: 1rem;
+    color: #1e1e1e;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  
+  .checkbox__container input:checked {
+    background-color: rgb(10, 189, 10);
+    border-color: #757575;
+    border-radius: 0.25rem;
+  }
+  
+  .checkbox:focus {
+    outline: 2px solid #0e0f10;
+    outline-offset: 2px;
+  }
+  
