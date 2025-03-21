@@ -18,8 +18,8 @@ const Card = ({ title, content, icon }: CardProps) => {
                     width={40}
                     height={40}
                     />
-            <div className={styles.card__container__content}>
-                <h2>{title}</h2>
+            <div className={styles.card__container__content__p}>
+                <h2 className={styles.card__container__content__h2}>{title}</h2>
                 <p>{content}</p>
             </div>
         </div>
