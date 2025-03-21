@@ -1,5 +1,6 @@
 .highlights__container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     gap: 2rem;
+    padding: 0 5rem;
 }
