@@ -16,7 +16,7 @@ export default function Home() {
     <div className={`${inter.className} ${styles.page}`}>
       <Header />
       <main>
-        <section className={styles.booking_widget}>
+        <section className={styles.booking_widget_wrapper}>
           <BookingWidget />
         </section>
         <section className={styles.content_wrapper}>
