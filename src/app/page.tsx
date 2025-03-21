@@ -19,7 +19,7 @@ export default function Home() {
         <section className={styles.booking_widget_wrapper}>
           <BookingWidget />
         </section>
-        <section className={styles.content_wrapper}>
+        <section className={styles.highlights_wrapper}>
           <Highlights />
         </section>
         <Footer>© 2025 Dentsu. All Rights Reserved</Footer>
