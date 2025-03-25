@@ -34,3 +34,11 @@
 .booking_widget__container__actions Button:hover {
     background-color: #1e1e1e;
 }
+
+
+@media (max-width: 768px) {
+    .booking_widget__container {
+        justify-content: center;
+    }
+
+}

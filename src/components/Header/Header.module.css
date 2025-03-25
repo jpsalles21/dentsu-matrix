@@ -68,3 +68,15 @@
 .header__container__nav a {
     color: #000;
 }
+
+@media (max-width: 1135px) {
+    .header__container__nav {
+        display: none;
+    }
+    .header__container__upper__actions_a {
+        display: none;
+    }
+    .header__container__upper__actions__menu {
+        display: block;
+    }
+}

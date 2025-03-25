@@ -1,5 +1,7 @@
 import Button from "@/components/Button/Button";
 import styles from './Header.module.css'
+import Image from "next/image";
+
 
 const Header = () => {
     return (
@@ -9,9 +11,17 @@ const Header = () => {
                     <h2>dentsu Matrix</h2>
                 </div>
                 <div className={styles.header__container__upper__actions}>
-                    <a href="">Career</a>
-                    <a href="">Help</a>
+                    <a href="" className={styles.header__container__upper__actions_a}>Career</a>
+                    <a href="" className={styles.header__container__upper__actions_a}>Help</a>
                     <Button variant="white">Sign in / Join</Button>
+                    <span className={styles.header__container__upper__actions__menu}>
+                    <Image
+                    src={'/Menu.svg'}
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                    />
+                    </span>
                 </div>
             </div>
             <nav className={styles.header__container__nav}>
