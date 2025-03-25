@@ -8,7 +8,8 @@ const Header = () => {
         <header className={styles.header__container}>
             <div className={styles.header__container__upper}>
                 <div className={styles.header__container__upper__title}>
-                    <h2>dentsu Matrix</h2>
+                    <h2>dentsu <span className={styles.header__container__upper__title__span}>Matrix</span></h2>
+                    
                 </div>
                 <div className={styles.header__container__upper__actions}>
                     <a href="" className={styles.header__container__upper__actions_a}>Career</a>

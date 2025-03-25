@@ -12,6 +12,7 @@
 .header__container h2 {
     color: #fff;
     margin: 0;
+    font-size: 2.1875rem;
 }
 
 .header__container__upper__actions a, .header__container__nav a {
@@ -78,5 +79,9 @@
     }
     .header__container__upper__actions__menu {
         display: block;
+    }
+
+    .header__container__upper__title__span {
+        display: none;
     }
 }
