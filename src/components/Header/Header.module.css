@@ -42,17 +42,29 @@
     display: flex;
 }
 
-.header__container__nav li {
+.header__container__nav {
+    width: 100%;
+}
+
+.header__container__nav__ul {
+    display: flex;
+    justify-content: center; 
+}
+
+.header__container__nav__li {
     background-color: #fff;
     color: #000;
     border-right: 0.0313rem solid #000;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 3.75rem;
-    width: 11rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto; 
+    padding: 0 1rem; 
+    flex-grow: 1; 
+    text-align: center;
 }
 
 .header__container__nav a {

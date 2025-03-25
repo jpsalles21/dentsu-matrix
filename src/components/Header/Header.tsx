@@ -15,13 +15,13 @@ const Header = () => {
                 </div>
             </div>
             <nav className={styles.header__container__nav}>
-                <ul>
-                    <li><a href="">Reservations</a></li>
-                    <li><a href="">Reservations</a></li>
-                    <li><a href="">Reservations</a></li>
-                    <li><a href="">Reservations</a></li>
-                    <li><a href="">Reservations</a></li>
-                    <li style={{ borderRight: "none" }}><a href="">Reservations</a></li>
+                <ul className={styles.header__container__nav__ul}>
+                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__li }style={{ borderRight: "none" }}><a href="">Reservations</a></li>
                 </ul>
             </nav>
         </header>
