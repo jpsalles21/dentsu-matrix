@@ -8,7 +8,7 @@ const Header = () => {
         <header className={styles.header__container}>
             <div className={styles.header__container__upper}>
                 <div className={styles.header__container__upper__title}>
-                    <h2>dentsu <span className={styles.header__container__upper__title__span}>Matrix</span></h2>
+                    <h2>dentsu <span className={styles.header__container__upper__title__subtitle}>Matrix</span></h2>
                     
                 </div>
                 <div className={styles.header__container__upper__actions}>
@@ -26,13 +26,13 @@ const Header = () => {
                 </div>
             </div>
             <nav className={styles.header__container__nav}>
-                <ul className={styles.header__container__nav__ul}>
-                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
-                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
-                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
-                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
-                    <li className={styles.header__container__nav__li}><a href="">Reservations</a></li>
-                    <li className={styles.header__container__nav__li }style={{ borderRight: "none" }}><a href="">Reservations</a></li>
+                <ul className={styles.header__container__nav__list__item}>
+                    <li className={styles.header__container__nav__list__item}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__list__item}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__list__item}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__list__item}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__list__item}><a href="">Reservations</a></li>
+                    <li className={styles.header__container__nav__list__item}style={{ borderRight: "none" }}><a href="">Reservations</a></li>
                 </ul>
             </nav>
         </header>

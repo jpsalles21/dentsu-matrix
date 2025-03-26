@@ -47,12 +47,12 @@
     width: 100%;
 }
 
-.header__container__nav__ul {
+.header__container__nav__list {
     display: flex;
     justify-content: center; 
 }
 
-.header__container__nav__li {
+.header__container__nav__list__item {
     background-color: #fff;
     color: #000;
     border-right: 0.0313rem solid #000;
@@ -85,7 +85,7 @@
         display: block;
     }
 
-    .header__container__upper__title__span {
+    .header__container__upper__title__subtitle {
         display: none;
     }
 }
