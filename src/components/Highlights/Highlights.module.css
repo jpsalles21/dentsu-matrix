@@ -1,5 +1,14 @@
 .highlights__container {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     padding: 0 5rem;
 }
+
+@media (max-width: 70.9375rem) {
+    .highlights__container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

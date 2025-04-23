@@ -1,13 +1,22 @@
 .booking_widget_wrapper {
-    background-image: url("/image.jpeg"); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    padding: 5rem 12.5rem;
-    margin-bottom: 3.75rem;
-  }
+  background-image: url("/image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 12.5rem;
+  margin-bottom: 3.75rem;
+}
 
-  .highlights_wrapper {
-    margin-bottom: 3.75rem;
+.highlights_wrapper {
+  margin-bottom: 3.75rem;
+}
+
+@media (max-width: 46.125rem) {
+  .booking_widget_wrapper {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 2rem;
   }
-  
+}
