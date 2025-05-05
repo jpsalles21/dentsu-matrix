@@ -11,7 +11,10 @@ const Input = ({ label, type = 'text', placeholder, required, style }: InputProp
         <div className={styles.input__container}>
             <label
                 htmlFor=""
-                style={{ color: required ? undefined : 'black' }}
+                style={{
+                    color: required ? undefined : 'black',
+                    fontWeight: required ? undefined : 600,
+                }}
             >
                 {required && <span>* </span>}
                 {label}
