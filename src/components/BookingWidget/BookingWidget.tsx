@@ -1,9 +1,7 @@
 'use client'
+import { Input, Button } from "@components";
 import { useState } from "react";
-import Checkbox from "../Checkbox/Checkbox";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
-import styles from './BookingWidget.module.css'
+import styles from './BookingWidget.module.css';
 
 const BookingWidget = () => {
 
@@ -21,10 +19,22 @@ const BookingWidget = () => {
                 </div>
             </form>
             <div className={styles.booking_widget__container__actions}>
-                <Checkbox label="Return to a different location" checked={isChecked} onChange={handleCheckboxChange} id="checkbox" form="form1" />
-                <Button variant="black" type="submit" form="form1">Search</Button>
+                <div className={styles.booking_widget__section}>
+                    <p>PICK-UP</p>
+                    <div className={styles.booking_widget__container__actions__pick_up_inputs}>
+                        <Input label="Date" required={false} />
+                        <Input label="Time" required={false} />
+                    </div>
+                </div>
+                <div className={styles.booking_widget__section}>
+                    <p>RETURN</p>
+                    <div className={styles.booking_widget__container__actions__return_inputs}>
+                        <Input label="Date" required={false} />
+                        <Input label="Time" required={false} />
+                    </div>
+                </div>
+                <Button variant="black" type="submit" form="form1">Browse Vehicles</Button>
             </div>
-
         </div>
     );
 }
