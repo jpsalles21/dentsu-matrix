@@ -22,15 +22,15 @@ const BookingWidget = () => {
                 <div className={styles.booking_widget__section}>
                     <p>PICK-UP</p>
                     <div className={styles.booking_widget__container__actions__pick_up_inputs}>
-                        <Input label="Date" required={false} />
-                        <Input label="Time" required={false} />
+                        <Input label="Date" required={false} className={styles.booking_widget__container__actions__input} />
+                        <Input label="Time" required={false} className={styles.booking_widget__container__actions__input} />
                     </div>
                 </div>
                 <div className={styles.booking_widget__section}>
                     <p>RETURN</p>
                     <div className={styles.booking_widget__container__actions__return_inputs}>
-                        <Input label="Date" required={false} />
-                        <Input label="Time" required={false} />
+                        <Input label="Date" required={false} className={styles.booking_widget__container__actions__input} />
+                        <Input label="Time" required={false} className={styles.booking_widget__container__actions__input} />
                     </div>
                 </div>
                 <Button variant="black" type="submit" form="form1">Browse Vehicles</Button>

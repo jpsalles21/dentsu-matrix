@@ -28,10 +28,12 @@
     align-items: flex-end;
     flex-wrap: wrap;
 }
+
 .booking_widget__container__actions Button {
     max-width: 15.625rem;
     height: 2.5rem;
 }
+
 .booking_widget__section {
     display: flex;
     flex-direction: column;
@@ -42,7 +44,8 @@
     background-color: #1e1e1e;
 }
 
-.booking_widget__container__actions__return_inputs, .booking_widget__container__actions__pick_up_inputs {
+.booking_widget__container__actions__return_inputs,
+.booking_widget__container__actions__pick_up_inputs {
     display: flex;
     gap: 1rem;
     flex-direction: row;
@@ -51,6 +54,14 @@
 
 @media (max-width: 48rem) {
     .booking_widget__container {
+        justify-content: center;
+    }
+
+    .booking_widget__container__actions__input {
+        max-width: 8.75rem;
+    }
+
+    .booking_widget__container__actions {
         justify-content: center;
     }
 
