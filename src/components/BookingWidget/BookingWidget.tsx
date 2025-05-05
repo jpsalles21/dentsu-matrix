@@ -21,7 +21,7 @@ const BookingWidget = () => {
                     </div>
                 </div>
                 <div className={styles.booking_widget__section}>
-                    <p>RETURN</p>
+                    <p className={styles.booking_widget__container__actions__title}>RETURN</p>
                     <div className={styles.booking_widget__container__actions__return_inputs}>
                         <Input label="Date" required={false} className={styles.booking_widget__container__actions__input} />
                         <Input label="Time" required={false} className={styles.booking_widget__container__actions__input} />
