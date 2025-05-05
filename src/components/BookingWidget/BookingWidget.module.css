@@ -29,6 +29,10 @@
     flex-wrap: wrap;
 }
 
+.booking_widget__container__actions__title {
+    font-weight: 600;
+}
+
 .booking_widget__container__actions Button {
     max-width: 15.625rem;
     height: 2.5rem;

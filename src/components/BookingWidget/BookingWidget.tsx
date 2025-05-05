@@ -14,7 +14,7 @@ const BookingWidget = () => {
             </form>
             <div className={styles.booking_widget__container__actions}>
                 <div className={styles.booking_widget__section}>
-                    <p>PICK-UP</p>
+                    <p className={styles.booking_widget__container__actions__title}>PICK-UP</p>
                     <div className={styles.booking_widget__container__actions__pick_up_inputs}>
                         <Input label="Date" required={false} className={styles.booking_widget__container__actions__input} />
                         <Input label="Time" required={false} className={styles.booking_widget__container__actions__input} />
