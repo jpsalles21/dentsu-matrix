@@ -4,9 +4,10 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string,
     required: boolean;
     style?: React.CSSProperties;
+    className?: string;
 }
 
-const Input = ({ label, type = 'text', placeholder, required, style }: InputProps) => {
+const Input = ({ label, type = 'text', placeholder, className, required, style }: InputProps) => {
     return (
         <div className={styles.input__container}>
             <label
@@ -20,6 +21,7 @@ const Input = ({ label, type = 'text', placeholder, required, style }: InputProp
                 {label}
             </label>
             <input
+                className={`${className}`}
                 type={type}
                 placeholder={placeholder}
                 style={style}
