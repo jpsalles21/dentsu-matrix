@@ -1,14 +1,8 @@
 'use client'
 import { Input, Button } from "@components";
-import { useState } from "react";
 import styles from './BookingWidget.module.css';
 
 const BookingWidget = () => {
-
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setIsChecked(event.target.checked);
-    }
     return (
         <div className={styles.booking_widget__container}>
             <h1>Reserve a vehicle</h1>
