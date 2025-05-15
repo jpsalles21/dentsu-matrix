@@ -8,7 +8,7 @@ const getVehicles = async () => {
   return data[0];
 }
 
-export default async function VehicleList() {
+const VehicleList = async () => {
   const vehicles = await getVehicles();
 
   return (
@@ -20,3 +20,5 @@ export default async function VehicleList() {
     </div>
   )
 }
+
+export default VehicleList;
