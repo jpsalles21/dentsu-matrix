@@ -1,6 +1,7 @@
-import { api } from "@/endpoints";
+import { api } from "..";
 
 export const getAllLocations = async () => {
-  const response = await api ('/location/listAll');
-  return response.data[0]; 
+  const data = await api ('/location/listAll');
+  const locations = data[0];
+  return locations;
 };
