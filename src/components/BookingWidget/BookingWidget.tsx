@@ -2,22 +2,14 @@
 import { useState, useEffect } from "react";
 import { Input, Button } from "@components";
 import styles from './BookingWidget.module.css';
-import { getAllLocations } from "@/endpoints/services/location";
 import { Location } from "@/types/location";
 
-const BookingWidget = () => {
-    
-    const [locations, setLocations] = useState<Location[]>([]);
-    const [selectedLocation, setSelectedLocation] = useState('');
+interface Props {
+  locations: Location[];
+}
 
-    useEffect(() => {
-       const fetchLocations = async () => {
-            const data = await getAllLocations();
-            setLocations(data);
-            console.log(data);
-        }
-        fetchLocations();
-    }, []);
+const BookingWidget = ({ locations }: Props) => {
+  const [selectedLocation, setSelectedLocation] = useState('');
 
     return (
         <div className={styles.booking_widget__container}>
