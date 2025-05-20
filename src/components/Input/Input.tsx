@@ -7,7 +7,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string;
 }
 
-const Input = ({ label, type = 'text', placeholder, className, required, style }: InputProps) => {
+const Input = ({ label, type = 'text', placeholder, className, required, style, ...rest }: InputProps) => {
     return (
         <div className={styles.input__container}>
             <label
@@ -25,6 +25,7 @@ const Input = ({ label, type = 'text', placeholder, className, required, style }
                 type={type}
                 placeholder={placeholder}
                 style={style}
+                {...rest}
             />
         </div>
     );
