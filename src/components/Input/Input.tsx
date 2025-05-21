@@ -13,8 +13,8 @@ const Input = ({ label, type = 'text', placeholder, className, required, style, 
             <label
                 htmlFor=""
                 style={{
-                    color: required ? undefined : 'black',
-                    fontWeight: required ? undefined : 600,
+                    color: required ? '' : 'black',
+                    fontWeight: required ? '' : 600,
                 }}
             >
                 {required && <span>* </span>}
