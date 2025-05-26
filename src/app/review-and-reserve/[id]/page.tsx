@@ -10,7 +10,6 @@ type Props = {
 const ReviewAndReservePage = async ({ params }: Props) => {
     const { id } = params;
     const vehicle = await getVehicleById(Number(id));
-    console.log(vehicle);
 
     if(!vehicle) return notFound();
 

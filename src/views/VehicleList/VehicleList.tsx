@@ -4,7 +4,6 @@ import { getAllVehicles } from "@/endpoints/services/vehicle";
 
 const VehicleList = async () => {
   const vehicles = await getAllVehicles();
-  console.log(vehicles)
 
   return (
     <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
