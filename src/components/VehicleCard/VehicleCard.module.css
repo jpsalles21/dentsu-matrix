@@ -14,12 +14,21 @@
 }
 
 .vehicle_card__vehicle__content__info {
-  
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .vehicle_infos {
     display: flex;
     gap: 2rem;
+}
+
+.vehicle_link {
+    text-decoration: underline;
+    color: #1E1E1E;
+    font-weight: 600;
+    line-height: 140%;
 }
 
 .vehicle_title {
@@ -31,12 +40,37 @@
     color: #757575;
     font-size: 1rem;
     font-weight: 600;
+    display: flex;
+    gap: 0.5rem;
 }
 
 .vehicle_card_vehicle__payment {
     display: flex;
     flex-direction: column;
+    justify-content: center;  
+    gap: 1rem; 
+}
+
+.payment_title {
+    display: flex;
+    font-size: 1rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.payment_price { 
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.payment_actions {
+    display: flex;
     align-items: center;
     justify-content: center;
-  
+}
+
+.payment_price_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

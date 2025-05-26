@@ -19,7 +19,7 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
         <div className={styles.vehicle_card__container}>
             <div className={styles.vehicle_card__vehicle__content}>
                 <Image
-                    src={'/vehicles/ford_ka.png'}
+                    src={'/vehicles/car.png'}
                     alt={'Vehicle Image'}
                     width={260}
                     height={215}
@@ -27,26 +27,54 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
                 <div className={styles.vehicle_card__vehicle__content__info}>
                     <h2 className={styles.vehicle_title}>{model} or similar</h2>
                     <div className={styles.vehicle_infos}>
-                        <span className={styles.vehicle_info}><p> Automatic </p> </span>
-                        <span className={styles.vehicle_info}><p> 5 people </p></span>
-                        <span className={styles.vehicle_info}><p> 4 bags </p> </span>
+                        <span className={styles.vehicle_info}>
+                            <Image
+                                src={'/vehicles/Send.svg'}
+                                alt='Send Icon'
+                                width={20}
+                                height={20}
+                            />
+                            Automatic
+                        </span>
+                        <span className={styles.vehicle_info}>
+                            <Image
+                                src={'/vehicles/People.svg'}
+                                alt='People Icon'
+                                width={20}
+                                height={20}
+                            />
+                            5 people
+                        </span>
+                        <span className={styles.vehicle_info}>
+                            <Image
+                                src={'/vehicles/Bags.svg'}
+                                alt='Bags Icon'
+                                width={20}
+                                height={20}
+                            />
+                            4 bags
+                        </span>
                     </div>
-                    <Link href={''}>
+                    <Link className={styles.vehicle_link} href={''}>
                         Features & price details
                     </Link>
 
                 </div>
             </div>
             <div className={styles.vehicle_card_vehicle__payment}>
-                <span>PAY LATER</span>
-                <div>
-                    <p>${price}.00</p>
+                <h3 className={styles.payment_title}>PAY LATER</h3>
+                <div className={styles.payment_price_content}>
+                    <p className={styles.payment_price}>${price}.00</p>
+                    <span>Per Day</span>
                 </div>
                 <div>
-                    <Button
-                        variant='black'
-                        onClick={() => handleReviewReserve(id)}
-                    >Select</Button>
+                    <div className={styles.payment_actions}>
+                        <Button
+                            variant='black'
+                            onClick={() => handleReviewReserve(id)}
+                        >Select
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div >
