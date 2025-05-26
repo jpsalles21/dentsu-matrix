@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Header from "@/components/Header/Header";
 import BookingWidget from "@/components/BookingWidget/BookingWidget";
 import Highlights from "@/components/Highlights/Highlights";
+import { getAllLocations } from "@/endpoints/services/location";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,13 +12,15 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function Home() {
+export default async function Home() {
+
+  const locations = await getAllLocations();
   return (
     <div className={`${inter.className} ${styles.page}`}>
       <Header />
       <main>
         <section className={styles.booking_widget_wrapper}>
-          <BookingWidget />
+          <BookingWidget locations={locations} />
         </section>
         <section className={styles.highlights_wrapper}>
           <Highlights />
