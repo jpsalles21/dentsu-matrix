@@ -12,7 +12,7 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
     const router = useRouter();
 
     const handleReviewReserve = (id: number) => {
-        router.push(`review-and-reserve/${id}`)
+        router.push(`/review-and-reserve`)
     }
 
     return (
@@ -25,14 +25,16 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
                     height={215}
                 />
                 <div className={styles.vehicle_card__vehicle__content__info}>
-                    <h2>{model} or similar</h2>
-                    <span>Automatic </span>
-                    <span>5 people </span>
-                    <span>4 bags </span>
-                    <p>{price}</p>
+                    <h2 className={styles.vehicle_title}>{model} or similar</h2>
+                    <div className={styles.vehicle_infos}>
+                        <span className={styles.vehicle_info}><p> Automatic </p> </span>
+                        <span className={styles.vehicle_info}><p> 5 people </p></span>
+                        <span className={styles.vehicle_info}><p> 4 bags </p> </span>
+                    </div>
                     <Link href={''}>
                         Features & price details
                     </Link>
+
                 </div>
             </div>
             <div className={styles.vehicle_card_vehicle__payment}>

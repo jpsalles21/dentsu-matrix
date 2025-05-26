@@ -13,8 +13,24 @@
     gap: 4rem;
 }
 
-.vehicle_card__vehicle_content__info {
-   
+.vehicle_card__vehicle__content__info {
+  
+}
+
+.vehicle_infos {
+    display: flex;
+    gap: 2rem;
+}
+
+.vehicle_title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.vehicle_info {
+    color: #757575;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .vehicle_card_vehicle__payment {
