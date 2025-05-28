@@ -18,12 +18,13 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
     return (
         <div className={styles.vehicle_card__container}>
             <div className={styles.vehicle_card__vehicle__content}>
-                <Image
-                    src={'/vehicles/car.png'}
-                    alt={'Vehicle Image'}
-                    width={260}
-                    height={215}
-                />
+                <div className={styles.image_wrapper}>
+                    <Image
+                        src={'/vehicles/car.png'}
+                        alt={'Vehicle Image'}
+                        fill
+                    />
+                </div>
                 <div className={styles.vehicle_card__vehicle__content__info}>
                     <h2 className={styles.vehicle_title}>{model} or similar</h2>
                     <div className={styles.vehicle_infos}>
