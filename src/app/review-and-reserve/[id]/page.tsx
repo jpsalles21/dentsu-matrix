@@ -13,10 +13,8 @@ const ReviewAndReservePage = async ({ params }: Props) => {
 
     if(!vehicle) return notFound();
 
-    return (
-        <>
-            <h1>{vehicle.model}</h1>
-        </>
+    return (    
+            <h1>{vehicle.model}</h1>    
     );
 }
 
