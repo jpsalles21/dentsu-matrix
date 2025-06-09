@@ -1,0 +1,114 @@
+.vehicle_card__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 9.9px 0px #00000040;
+}
+
+.vehicle_card__vehicle__content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.vehicle_card__vehicle__content__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.image_wrapper {
+    position: relative;
+    width: 16.25rem;
+    height: 13.4375rem;
+}
+
+.vehicle_infos {
+    display: flex;
+    gap: 2rem;
+}
+
+.vehicle_link {
+    text-decoration: underline;
+    color: #1E1E1E;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.vehicle_title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.vehicle_info {
+    color: #757575;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.vehicle_card_vehicle__payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.payment_title {
+    display: flex;
+    font-size: 1rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.payment_price {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.payment_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment_price_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+@media (max-width: 59rem) {
+    .vehicle_card__container {
+        flex-direction: column;
+        padding: 0.5rem
+    }
+
+    .vehicle_card__vehicle__content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .image_wrapper {
+        width: 180px;
+        height: 150px;
+    }
+
+    .vehicle_title {
+        font-size: 1.25rem;
+    }
+
+    .vehicle_info {
+        font-size: 0.75rem;
+    }
+
+    .vehicle_card_vehicle__payment {
+        margin-top: 1.4375rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+}
