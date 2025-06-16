@@ -9,6 +9,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input[type="date"],
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  background-color: white;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+
 * {
   padding: 0;
   margin: 0;
