@@ -4,6 +4,7 @@ import { Input, Button } from "@components";
 import styles from './BookingWidget.module.css';
 import { Location } from "@/types";
 import { useBookingContext } from "@/context/BookingContext";
+import { useRouter } from "next/navigation";
 
 interface Props {
     locations: Location[];
@@ -15,6 +16,7 @@ const BookingWidget = ({ locations }: Props) => {
     const [pickupTime, setPickupTime] = useState('');
     const [returnDate, setReturnDate] = useState('');
     const [returnTime, setReturnTime] = useState('');
+    const router = useRouter();
 
     const {
         setLocation,
@@ -25,16 +27,19 @@ const BookingWidget = ({ locations }: Props) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const matched = locations.find(
+        const validLocation = locations.find(
             (loc) => `${loc.name} - ${loc.address}` === selectedLocation
         );
 
-        if (matched) {
-            setLocation(matched);    
+        if (validLocation) {
+            setLocation(validLocation);
+            setPickupInfo({ date: pickupDate, time: pickupTime });
+            setReturnInfo({ date: returnDate, time: returnTime });
+            router.push(`/choose-vehicle/${validLocation.id}`)
         }
-        setPickupInfo({ date: pickupDate, time: pickupTime });
-        setReturnInfo({ date: returnDate, time: returnTime });
+
     };
+
 
     return (
         <div className={styles.booking_widget__container}>
