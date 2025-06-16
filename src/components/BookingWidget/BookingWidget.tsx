@@ -31,7 +31,7 @@ const BookingWidget = ({ locations }: Props) => {
             (loc) => `${loc.name} - ${loc.address}` === selectedLocation
         );
 
-        if (validLocation) {
+        if (validLocation && pickupDate && pickupTime && returnDate && returnTime ) {
             setLocation(validLocation);
             setPickupInfo({ date: pickupDate, time: pickupTime });
             setReturnInfo({ date: returnDate, time: returnTime });
