@@ -12,7 +12,7 @@ const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
     const router = useRouter();
 
     const handleReviewReserve = (id: number) => {
-        router.push(`/review-and-reserve`)
+        router.push(`/review-and-reserve/${id}`)
     }
 
     return (
