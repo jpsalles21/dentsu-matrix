@@ -1,12 +1,17 @@
 import { VehicleCard } from "@/components"
 import { Vehicle } from "@/types/vehicle";
-import { getAllVehicles } from "@/endpoints/services/vehicle";
+import { getCarPerLocation } from "@/endpoints/services/carsPerLocation";
+import styles from './VehicleList.module.css'
 
-const VehicleList = async () => {
-  const vehicles = await getAllVehicles();
+interface VehicleListProps {
+  id: number;
+}
+
+const VehicleList = async ({ id }: VehicleListProps) => {
+  const vehicles: Vehicle[] = await getCarPerLocation(id);
 
   return (
-    <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+    <div className={styles.container}>
       {vehicles.map((vehicle: Vehicle) => (
         <VehicleCard
           key={vehicle.id}

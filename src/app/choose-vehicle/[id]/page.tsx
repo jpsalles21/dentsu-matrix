@@ -1,6 +1,7 @@
 import { VehicleCard } from "@/components";
 import { getCarPerLocation } from "@/endpoints/services/carsPerLocation";
 import { Vehicle } from "@/types";
+import VehicleList from "@/views/VehicleList/VehicleList";
 
 type Props = {
     params: {
@@ -10,16 +11,9 @@ type Props = {
 
 const ChooseVehiclePage = async ({ params }: Props) => {
     const { id } = params;
-    const vehicles: Vehicle[] = await getCarPerLocation(Number(id));
     return (
         <>
-            {vehicles.map((vehicle: Vehicle) => (
-                <VehicleCard
-                    key={vehicle.id}
-                    model={vehicle.model}
-                    price={vehicle.price}
-                    id={vehicle.id} />
-            ))}
+        <VehicleList id={Number(id)}/>
         </>
     );
 }
