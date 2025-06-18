@@ -1,0 +1,14 @@
+.steps {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.step {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .step_detail {
+    margin: 8rem
+  }
+
