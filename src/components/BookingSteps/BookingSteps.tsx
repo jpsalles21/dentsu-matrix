@@ -16,7 +16,22 @@ const BookingSteps = ({ currentStep }: BookingStepsProps) => {
     return (
         <div className={styles.container}>
 
-          
+            <div className={styles.step}>
+                <h3>Rental Details</h3>
+                <span>{pickupInfo.date} {pickupInfo.time}</span>
+                <span>{returnInfo.date} {returnInfo.time}</span>
+            </div>
+           <div className={currentStep === "vehicle" ? styles.selected : styles.step}>
+                <h3>Vehicle</h3>
+            </div>
+            <div className={styles.step}>
+                <h3>Extras</h3>
+            </div>
+            <div className={styles.step}>
+                <h3>Review & Reserve</h3>
+            </div>
+
+
         </div>
     );
 };
