@@ -1,7 +1,8 @@
-import { BookingSteps, VehicleCard } from "@/components";
-import { getCarPerLocation } from "@/endpoints/services/carsPerLocation";
-import { Vehicle } from "@/types";
+import { BookingHeader, BookingSteps, SimpleHeader } from "@/components";
+import styles from './page.module.css';
 import VehicleList from "@/views/VehicleList/VehicleList";
+import { Vehicle } from "@/types";
+import { getCarPerLocation } from "@/endpoints/services/carsPerLocation";
 
 type Props = {
     params: {
@@ -11,12 +12,25 @@ type Props = {
 
 const ChooseVehiclePage = async ({ params }: Props) => {
     const { id } = params;
+    const vehicles: Vehicle[] = await getCarPerLocation(Number(id));
+    const vehiclesCount = vehicles.length;
+
     return (
-        <>
-        <BookingSteps currentStep="review"/>
-        <VehicleList id={Number(id)}/>
-        </>
+        <div className={styles.container}>
+            <div className={styles.page_header}>
+                <SimpleHeader />
+                <BookingSteps currentStep="vehicle" />
+                <BookingHeader 
+                    title="Choose a Vehicle Car" 
+                    results={`${vehiclesCount} results`} 
+                />
+            </div>
+            <section className={styles.vehicle_list}>
+            <VehicleList vehicles={vehicles} />
+            </section>
+        </div >
     );
 }
+
 
 export default ChooseVehiclePage;
