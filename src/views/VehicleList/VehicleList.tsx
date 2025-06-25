@@ -4,12 +4,10 @@ import { getCarPerLocation } from "@/endpoints/services/carsPerLocation";
 import styles from './VehicleList.module.css'
 
 interface VehicleListProps {
-  id: number;
+  vehicles: Vehicle[];
 }
 
-const VehicleList = async ({ id }: VehicleListProps) => {
-  const vehicles: Vehicle[] = await getCarPerLocation(id);
-
+const VehicleList = async ({ vehicles }: VehicleListProps) => {
   return (
     <div className={styles.container}>
       {vehicles.map((vehicle: Vehicle) => (
