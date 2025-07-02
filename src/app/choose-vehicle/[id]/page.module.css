@@ -5,3 +5,12 @@
 .vehicle_list {
     padding: 4rem 5.125rem;
 }
+
+
+@media (max-width: 48rem) {
+
+    .vehicle_list {
+        padding: 0
+    }
+
+}
