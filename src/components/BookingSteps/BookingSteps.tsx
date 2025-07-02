@@ -27,7 +27,7 @@ const BookingSteps = ({ currentStep }: BookingStepsProps) => {
             <div className={styles.step}>
                 <h3>Extras</h3>
             </div>
-            <div className={styles.step}>
+            <div className={currentStep === "review" ? styles.selected : styles.step}>
                 <h3>Review & Reserve</h3>
             </div>
 
