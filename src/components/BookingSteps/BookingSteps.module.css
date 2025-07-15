@@ -1,18 +1,18 @@
-.container { 
+.container {
   display: flex;
   padding: 0.5rem 32 0.5rem 2rem;
   justify-content: space-between;
- 
   align-items: center;
 }
 
-.step, .selected {
+.step,
+.selected {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-right: 2rem;
-  padding-left: 2rem; 
+  padding-left: 2rem;
   height: 7.8125rem;
   width: fill;
 }
@@ -23,4 +23,39 @@
 
 .selected {
   background-color: #D9D9D9;
+}
+
+@media (max-width: 48rem) {
+  .rental_infos {
+    display: none;
+  }
+
+  .step {
+    background-color: transparent;
+  }
+
+  .selected {
+    background-color: #5A5A5A;
+    color: #ffffff;
+    border-radius: 0.5rem;
+  }
+
+  .step,
+  .selected {
+    font-size: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    height: auto;
+    width: auto;
+    gap: 1.25rem
+  }
+
+  .container {
+    margin-top: 2.5rem;
+    padding: 0 2rem;
+  }
+
 }

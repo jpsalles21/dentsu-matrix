@@ -18,10 +18,10 @@ const BookingSteps = ({ currentStep }: BookingStepsProps) => {
 
             <div className={styles.step}>
                 <h3>Rental Details</h3>
-                <span>{pickupInfo.date} {pickupInfo.time}</span>
-                <span>{returnInfo.date} {returnInfo.time}</span>
+                <span className={styles.rental_infos}>{pickupInfo.date} {pickupInfo.time}</span>
+                <span className={styles.rental_infos}>{returnInfo.date} {returnInfo.time}</span>
             </div>
-           <div className={currentStep === "vehicle" ? styles.selected : styles.step}>
+            <div className={currentStep === "vehicle" ? styles.selected : styles.step}>
                 <h3>Vehicle</h3>
             </div>
             <div className={styles.step}>
