@@ -62,12 +62,12 @@ const ReviewAndReserve = ({ vehicle }: ReviewAndReserveProps) => {
                     </div>
                     <form id="reservationForm" action="/submit" method="post">
                         <div className={styles.form_names}>
-                            <Input label="First Name" type="text" id="firstName" name="firstName" required />
-                            <Input label="Last Name" type="text" id="lastName" name="lastName" required />
+                            <Input labelColor="black" label="First Name" type="text" id="firstName" name="firstName" required />
+                            <Input labelColor="black" label="Last Name" type="text" id="lastName" name="lastName" required />
                         </div>
                         <div className={styles.form_infos}>
-                            <Input label="Phone Number" type="tel" id="phone" name="phone" required />
-                            <Input label="Email Address" type="email" id="email" name="email" required />
+                            <Input labelColor="black" label="Phone Number" type="tel" id="phone" name="phone" required />
+                            <Input labelColor="black" label="Email Address" type="email" id="email" name="email" required />
                         </div>
                     </form>
                 </div>
