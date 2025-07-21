@@ -2,6 +2,7 @@
 
 import { useBookingContext } from '@/context/BookingContext';
 import styles from './BookingSteps.module.css';
+import { formatDateAndTime } from '@/utils/formatDateTime';
 
 
 interface BookingStepsProps {
@@ -18,8 +19,8 @@ const BookingSteps = ({ currentStep }: BookingStepsProps) => {
 
             <div className={styles.step}>
                 <h3>Rental Details</h3>
-                <span className={styles.rental_infos}>{pickupInfo.date} {pickupInfo.time}</span>
-                <span className={styles.rental_infos}>{returnInfo.date} {returnInfo.time}</span>
+                <span className={styles.rental_infos}>{formatDateAndTime(pickupInfo.date, pickupInfo.time)}</span>
+                <span className={styles.rental_infos}>{formatDateAndTime(returnInfo.date, returnInfo.time)}</span>
             </div>
             <div className={currentStep === "vehicle" ? styles.selected : styles.step}>
                 <h3>Vehicle</h3>
