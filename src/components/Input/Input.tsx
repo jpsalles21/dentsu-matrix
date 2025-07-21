@@ -5,15 +5,16 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     required: boolean;
     style?: React.CSSProperties;
     className?: string;
+    labelColor?: 'default' | 'black';
 }
 
-const Input = ({ label, type = 'text', placeholder, className, required, style, ...rest }: InputProps) => {
+const Input = ({ label, type = 'text', placeholder, className, required, style, labelColor = 'default', ...rest }: InputProps) => {
     return (
         <div className={styles.input__container}>
             <label
                 htmlFor=""
                 style={{
-                    color: required ? '' : 'black',
+                    color: labelColor === 'black' ? 'black' : required ? undefined : 'black',
                     fontWeight: required ? '' : 600,
                 }}
             >
