@@ -5,6 +5,7 @@ import styles from './BookingWidget.module.css';
 import { Location } from "@/types";
 import { useBookingContext } from "@/context/BookingContext";
 import { useRouter } from "next/navigation";
+import { initiateBooking } from "@/endpoints/services/iniciateBooking";
 
 interface Props {
     locations: Location[];
@@ -24,22 +25,37 @@ const BookingWidget = ({ locations }: Props) => {
         setReturnInfo,
     } = useBookingContext();
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const validLocation = locations.find(
             (loc) => `${loc.name} - ${loc.address}` === selectedLocation
         );
 
-        if (validLocation && pickupDate && pickupTime && returnDate && returnTime ) {
+        if (validLocation && pickupDate && pickupTime && returnDate && returnTime) {
             setLocation(validLocation);
             setPickupInfo({ date: pickupDate, time: pickupTime });
             setReturnInfo({ date: returnDate, time: returnTime });
-            router.push(`/choose-vehicle/${validLocation.id}`)
+
+            try {
+                await initiateBooking({
+                    pickupDate,
+                    returnDate,
+                    pickupTime,
+                    returnTime,
+                    pickupLocation: { id: validLocation.id },
+                    returnLocation: { id: validLocation.id },
+                });
+
+                
+                router.push(`/choose-vehicle/${validLocation.id}`);
+            } catch (err) {
+                console.log(pickupDate, pickupTime)
+                console.error('Erro ao iniciar reserva:', err);
+                alert('Não foi possível iniciar a reserva. Tente novamente.');
+            }
         }
-
     };
-
 
     return (
         <div className={styles.booking_widget__container}>
