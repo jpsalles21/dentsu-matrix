@@ -15,6 +15,7 @@ interface ReviewAndReserveProps {
 const ReviewAndReserve = ({ vehicle }: ReviewAndReserveProps) => {
     const { location, pickupInfo, returnInfo, setVehicle, totalPrice, setTotalPrice } = useBookingContext();
     const [loadingPrice, setLoadingPrice] = useState(true);
+    const [loadingReservation, setLoadingReservation] = useState(false);
 
     useEffect(() => {
         setVehicle(vehicle);
@@ -38,6 +39,7 @@ const ReviewAndReserve = ({ vehicle }: ReviewAndReserveProps) => {
     }, [vehicle, setVehicle, setTotalPrice]);
 
     const handleCommit = async (e: React.FormEvent<HTMLFormElement>) => {
+        setLoadingReservation(true);
         e.preventDefault();
         const form = e.currentTarget;
         const formData = new FormData(form);
@@ -53,6 +55,8 @@ const ReviewAndReserve = ({ vehicle }: ReviewAndReserveProps) => {
             const response = await commitReservation(user);
         } catch (error) {
             console.error(error);
+        } finally {
+            setLoadingReservation(false);
         }
     };
 
@@ -126,7 +130,7 @@ const ReviewAndReserve = ({ vehicle }: ReviewAndReserveProps) => {
                         </div>
                     </div>
                     <div className={styles.reserve_button}>
-                        <Button form="reservationForm" variant="black" type="submit">Reserve Now</Button>
+                        <Button form="reservationForm" variant="black" type="submit">{loadingReservation ? "Loading..." : 'Reserve Now'}</Button>
                     </div>
                 </div>
             </div>
