@@ -14,6 +14,8 @@ interface BookingContextProps {
   setPickupInfo: (dt: DateTime) => void;
   returnInfo: DateTime;
   setReturnInfo: (dt: DateTime) => void;
+  totalPrice: Number | null;
+  setTotalPrice: (tp: Number) => void;
 }
 
 const BookingContext = createContext<BookingContextProps | undefined>(undefined);
@@ -34,6 +36,8 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(() => getFromStorage('booking_user', null));
   const [pickupInfo, setPickupInfo] = useState<DateTime>(() => getFromStorage('booking_pickupInfo', { date: '', time: '' }));
   const [returnInfo, setReturnInfo] = useState<DateTime>(() => getFromStorage('booking_returnInfo', { date: '', time: '' }));
+  const [totalPrice, setTotalPrice] = useState<Number | null>(null);
+
 
   useEffect(() => {
     if (location) localStorage.setItem('booking_location', JSON.stringify(location));
@@ -55,6 +59,10 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('booking_returnInfo', JSON.stringify(returnInfo));
   }, [returnInfo]);
 
+  useEffect(() => {
+    if (totalPrice !== null) localStorage.setItem('booking_totalPrice', JSON.stringify(totalPrice));
+  }, [totalPrice]);
+
   return (
     <BookingContext.Provider value={{
       location,
@@ -66,7 +74,9 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
       pickupInfo,
       setPickupInfo,
       returnInfo,
-      setReturnInfo
+      setReturnInfo,
+      totalPrice,
+      setTotalPrice
     }}>
       {children}
     </BookingContext.Provider>
