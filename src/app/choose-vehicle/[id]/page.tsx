@@ -16,20 +16,22 @@ const ChooseVehiclePage = async ({ params }: Props) => {
     const vehiclesCount = vehicles.length;
 
     return (
-        <div className={styles.container}>
-            <div className={styles.page_header}>
-                <SimpleHeader />
-                <BookingSteps currentStep="vehicle" />
-                <BookingHeader
-                    title="Choose a Vehicle Class"
-                    results={`${vehiclesCount} results`}
-                />
-            </div>
-            <section className={styles.vehicle_list}>
-                <VehicleList vehicles={vehicles} />
-            </section>
-            <Footer/>
-        </div >
+        <>
+            <div className={styles.container}>
+                <div className={styles.page_header}>
+                    <SimpleHeader />
+                    <BookingSteps currentStep="vehicle" />
+                    <BookingHeader
+                        title="Choose a Vehicle Class"
+                        results={`${vehiclesCount} results`}
+                    />
+                </div>
+                <section className={styles.vehicle_list}>
+                    <VehicleList vehicles={vehicles} />
+                </section>
+            </div >
+            <Footer />
+        </>
     );
 }
 
