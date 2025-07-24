@@ -7,3 +7,4 @@ export {default as Header} from "./Header/Header";
 export {default as SimpleHeader} from "./Header/SimpleHeader";
 export {default as BookingHeader} from "./BookingHeader/BookingHeader";
 export {default as Loading} from "./Loading/Loading";
+export {default as Footer} from "./Footer/Footer";

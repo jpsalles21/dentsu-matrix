@@ -1,4 +1,4 @@
-import { BookingHeader, BookingSteps, SimpleHeader } from "@/components";
+import { BookingHeader, BookingSteps, Footer, SimpleHeader } from "@/components";
 import styles from './page.module.css';
 import VehicleList from "@/views/VehicleList/VehicleList";
 import { Vehicle } from "@/types";
@@ -28,6 +28,7 @@ const ChooseVehiclePage = async ({ params }: Props) => {
             <section className={styles.vehicle_list}>
                 <VehicleList vehicles={vehicles} />
             </section>
+            <Footer/>
         </div >
     );
 }
