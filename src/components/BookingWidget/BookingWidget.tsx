@@ -32,28 +32,30 @@ const BookingWidget = ({ locations }: Props) => {
             (loc) => `${loc.name} - ${loc.address}` === selectedLocation
         );
 
-        if (validLocation && pickupDate && pickupTime && returnDate && returnTime) {
-            setLocation(validLocation);
-            setPickupInfo({ date: pickupDate, time: pickupTime });
-            setReturnInfo({ date: returnDate, time: returnTime });
+        if (!validLocation || !pickupDate || !pickupTime || !returnDate || !returnTime) {
+            return;
+        }
 
-            try {
-                await initiateBooking({
-                    pickupDate,
-                    returnDate,
-                    pickupTime,
-                    returnTime,
-                    pickupLocation: { id: validLocation.id },
-                    returnLocation: { id: validLocation.id },
-                });
+        setLocation(validLocation);
+        setPickupInfo({ date: pickupDate, time: pickupTime });
+        setReturnInfo({ date: returnDate, time: returnTime });
 
-                
-                router.push(`/choose-vehicle/${validLocation.id}`);
-            } catch (err) {
-                console.log(pickupDate, pickupTime)
-                console.error('Erro ao iniciar reserva:', err);
-                alert('Não foi possível iniciar a reserva. Tente novamente.');
-            }
+        try {
+            await initiateBooking({
+                pickupDate,
+                returnDate,
+                pickupTime,
+                returnTime,
+                pickupLocation: { id: validLocation.id },
+                returnLocation: { id: validLocation.id },
+            });
+
+            
+            router.push(`/choose-vehicle/${validLocation.id}`);
+        } catch (err) {
+            console.log(pickupDate, pickupTime)
+            console.error('Erro ao iniciar reserva:', err);
+            alert('Não foi possível iniciar a reserva. Tente novamente.');
         }
     };
 
