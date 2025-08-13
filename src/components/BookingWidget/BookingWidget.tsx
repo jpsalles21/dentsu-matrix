@@ -62,7 +62,7 @@ const BookingWidget = ({ locations }: Props) => {
     return (
         <div className={styles.booking_widget__container}>
             <h1>Reserve a vehicle</h1>
-            <form id="form1" onSubmit={handleSubmit}>
+            <form id="vehicle-booking-form" onSubmit={handleSubmit}>
                 <div className={styles.booking_widget__container__inputs}>
                     <p>Pick-up & Return Location (ZIP, City or Airport)</p>
                     <Input
@@ -127,7 +127,7 @@ const BookingWidget = ({ locations }: Props) => {
                         </div>
                     </div>
 
-                    <Button variant="black" type="submit" form="form1">Browse Vehicles</Button>
+                    <Button variant="black" type="submit" form="vehicle-booking-form">Browse Vehicles</Button>
                 </div>
             </form>
         </div>
