@@ -43,14 +43,10 @@
   .step,
   .selected {
     font-size: 0.625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     height: auto;
     width: auto;
-    gap: 1.25rem
+    gap: 1.25rem;
   }
 
   .container {
