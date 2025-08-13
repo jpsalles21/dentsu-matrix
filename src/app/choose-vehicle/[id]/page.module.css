@@ -1,0 +1,13 @@
+.container {
+    padding-bottom: 1rem;
+}
+
+.vehicle_list {
+    padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .vehicle_list {
+        padding: 4rem 5.125rem;
+    }
+}

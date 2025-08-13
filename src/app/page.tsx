@@ -25,7 +25,7 @@ export default async function Home() {
         <section className={styles.highlights_wrapper}>
           <Highlights />
         </section>
-        <Footer>© 2025 Dentsu. All Rights Reserved</Footer>
+        <Footer/>
       </main>
     </div>
   );

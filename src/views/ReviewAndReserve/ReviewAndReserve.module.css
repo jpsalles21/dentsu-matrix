@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem;
+}
+
+.card_details,
+.booking_card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    min-width: 15rem;
+    max-width: 28.4375rem;
+    border: 0.0625rem solid #D9D9D9;
+}
+
+.booking_card {
+    max-width: none;
+}
+
+.left_cards,
+.right_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.5rem;
+    width: 47.0625rem;
+}
+
+.form_names {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form_names>* {
+    flex: 1;
+}
+
+.form_infos {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 0.0625rem solid #D9D9D9;
+    padding: 0.375rem 0;
+}
+
+.warn_message {
+    color: #B3B3B3;
+    line-height: 140%;
+}
+
+.info_subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.reserve {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.reserve_button {
+    margin-left: auto;
+}
+
+.info_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vehicle_price {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 48rem) {
+    .container {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .card_details,
+    .booking_card {
+        border: none;
+        padding: 0;
+    }
+
+    .form {
+        width: auto;
+    }  
+    
+    .form_names {
+        flex-direction: column;
+    }
+
+    .reserve_button {
+        margin-bottom: 2rem;
+    }
+
+    .info_title {
+        font-size: 1.2rem;
+    }
+
+}

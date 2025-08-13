@@ -5,15 +5,28 @@ import Link from 'next/link';
 import { Button } from '@components'
 import { Vehicle } from '@/types/vehicle';
 import { useRouter } from 'next/navigation';
+import { selectCar } from '@/endpoints/services/selectCar';
+import { getVehicleById } from '@/endpoints/services/vehicleId';
 
 type VehicleCardProps = Vehicle;
 
 const VehicleCard = ({ model, price, id }: VehicleCardProps) => {
     const router = useRouter();
 
-    const handleReviewReserve = (id: number) => {
-        router.push(`/review-and-reserve`)
-    }
+
+    const handleReviewReserve = async (id: number) => {
+        try {
+            const vehicle = await getVehicleById(id);
+            if (!vehicle) {
+                return;
+            }
+
+            await selectCar(vehicle);
+            router.push(`/review-and-reserve/${id}`);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <div className={styles.vehicle_card__container}>

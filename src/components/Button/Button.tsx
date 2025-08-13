@@ -9,7 +9,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string; 
 }
 
-const Button = ({ onClick, children, variant, style, className, disabled = false, type }: ButtonProps) => {
+const Button = ({ onClick, children, variant, style, className, disabled = false, type, form }: ButtonProps) => {
 
     return (
         <button
@@ -18,6 +18,7 @@ const Button = ({ onClick, children, variant, style, className, disabled = false
             type={type}
             disabled={disabled}
             style={style}
+            form={form}
         >
             {children}
         </button>

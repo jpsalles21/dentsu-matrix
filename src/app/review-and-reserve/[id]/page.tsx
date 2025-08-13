@@ -1,4 +1,8 @@
+
+import { BookingHeader, BookingSteps, SimpleHeader } from "@/components";
+import Footer from "@/components/Footer/Footer";
 import { getVehicleById } from "@/endpoints/services/vehicleId";
+import ReviewAndReserve from "@/views/ReviewAndReserve/ReviewAndReserve";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -11,10 +15,17 @@ const ReviewAndReservePage = async ({ params }: Props) => {
     const { id } = params;
     const vehicle = await getVehicleById(Number(id));
 
-    if(!vehicle) return notFound();
+    if (!vehicle) return notFound();
 
-    return (    
-            <h1>{vehicle.model}</h1>    
+    return (
+        <>
+            <SimpleHeader />
+            <BookingSteps currentStep="review" />
+            <BookingHeader title="Review & Reserve" />
+            <ReviewAndReserve vehicle={vehicle} />
+            <Footer/>
+          
+        </>
     );
 }
 

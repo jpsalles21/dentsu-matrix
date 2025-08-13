@@ -1,0 +1,19 @@
+.container {
+    padding: 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (max-width: 48rem) {
+  .container {
+    background-color: transparent;
+    color: #000000; 
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+
+}
