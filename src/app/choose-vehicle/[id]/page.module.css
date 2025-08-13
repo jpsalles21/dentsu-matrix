@@ -3,14 +3,11 @@
 }
 
 .vehicle_list {
-    padding: 4rem 5.125rem;
+    padding: 0;
 }
 
-
-@media (max-width: 48rem) {
-
+@media (min-width: 48rem) {
     .vehicle_list {
-        padding: 0
+        padding: 4rem 5.125rem;
     }
-
 }
